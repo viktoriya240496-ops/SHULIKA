@@ -3,7 +3,6 @@ function checkProb(count) {
     let oddCount = 0;
 
     for (let i = 0; i < count; i++) {
-        // Генерація випадкового числа від 100 до 1000 включно
         let randomNum = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
 
         if (randomNum % 2 === 0) {
@@ -13,14 +12,13 @@ function checkProb(count) {
         }
     }
 
-    let evenPercent = ((evenCount / count) * 100).toFixed(2);
-    let oddPercent = ((oddCount / count) * 100).toFixed(2);
+    let evenPerc = ((evenCount / count) * 100).toFixed(2);
+    let oddPerc = ((oddCount / count) * 100).toFixed(2);
 
     console.log(`Кількість згенерованих чисел: ${count}`);
     console.log(`Парних чисел: ${evenCount}`);
     console.log(`Не парних чисел: ${oddCount}`);
-    console.log(`Відсоток парних до не парних: ${evenPercent}% / ${oddPercent}%`);
+    console.log(`Відсоток парних до не парних: ${evenPerc}% / ${oddPerc}%`);
 }
 
-// Приклад виклику функції
 checkProb(50);
